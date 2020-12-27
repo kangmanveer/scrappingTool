@@ -23,7 +23,7 @@ export const Makes = ({makes}) => {
                         </thead>
 
     return (
-        <Table striped bordered hover>
+        <Table striped bordered hover className="table-dark">
             {tableHeader}
             <tbody>
                 {DataTable}

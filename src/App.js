@@ -2,7 +2,6 @@ import React from "react";
 import './App.css';
 import rp from "request-promise";
 import cheerio from "cheerio";
-import Table from 'react-bootstrap/Table';
 import { ExportCSV } from './util/export';
 import { Makes } from './util/table';
 import { Header } from './util/Header'
@@ -22,9 +21,9 @@ function App() {
       onCrawl();
     }
   }
-  
+
   function onCrawl(){
-    const urlVal = `https://cors-anywhere.herokuapp.com/${url}`;
+    const urlVal = url;
     rp(urlVal)
      .then(html => {
        let names = [];
